@@ -51,23 +51,15 @@ export const metadata: Metadata = {
     "Problem Solving",
     "Software Architect",
   ],
-  openGraph: {
-    title: "Dario Kolic | Full-Stack & AI App Development Services",
-    description:
-      "Expert full-stack web and innovative AI app development by Dario Kolic. Specializing in MERN stack, AI Chatbots, and more. View portfolio and contact now!",
-    url: "https://www.dariokolic.com",
-    siteName: "Dario Kolic Portfolio",
-    images: [
-      {
-        url: "https://www.dariokolic.com/og_image.png", // Replace with your actual OG image URL
-        width: 1200,
-        height: 630,
-        alt: "Dario Kolic - Full-Stack & AI App Development",
-      },
-    ],
-    locale: "en_US",
-    type: "website",
-  },
+  // openGraph: {
+  //   title: "Dario Kolic | Full-Stack & AI App Development Services",
+  //   description:
+  //     "Expert full-stack web and innovative AI app development by Dario Kolic. Specializing in MERN stack, AI Chatbots, and more. View portfolio and contact now!",
+  //   url: "https://www.dariokolic.com",
+  //   siteName: "Dario Kolic Portfolio",
+  //   locale: "en_US",
+  //   type: "website",
+  // },
   robots: {
     index: true,
     follow: true,
