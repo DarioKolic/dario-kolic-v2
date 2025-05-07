@@ -4,8 +4,8 @@ import { motion, useAnimationFrame } from 'framer-motion';
 import { useEffect, useRef, useState } from 'react';
 import './BackgroundAnimation.scss';
 
-const DOT_RADIUS = 1.5; // Dot radius
-const DOT_SPACING = 12; // Increased spacing for performance
+const DOT_RADIUS = 2; // Dot radius
+const DOT_SPACING = 18; // Increased spacing for performance
 const GRID_SIZE = DOT_RADIUS * 2 + DOT_SPACING;
 
 export default function BackgroundAnimation() {

@@ -23,7 +23,6 @@ export const Button: React.FC<IButtonProps> = ({
             onClick={onClick}
             startIcon={icon}
             sx={{
-                cursor: 'none',
                 ...sx
             }}
             data-hover

@@ -53,7 +53,7 @@ export const Cursor: React.FC = () => {
             }}
             transition={{
                 type: "spring",
-                stiffness: 500,
+                stiffness: 600,
                 damping: 28,
             }}
         >
