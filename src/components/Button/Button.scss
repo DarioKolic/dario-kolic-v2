@@ -1,0 +1,38 @@
+@use '../../app/variables.scss' as *;
+
+.button {
+    padding: 10px 16px;
+    border: 1px solid;
+    border-radius: 6px;
+    cursor: none;
+    transition: all 0.2s ease-in;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: $text-light;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 8px;
+    &__icon {
+        display: flex;
+        align-items: center;
+        vertical-align: middle;
+        font-size: 20px;
+    }
+
+    &_primary {
+        background-color: $accent;
+        border-color: $accent;
+        &:hover {
+            background-color: $accent-secondary;
+        }
+    }
+    &_secondary {
+        background-color: $background-light;
+        border-color: $border;
+        &:hover {
+            background-color: $background;
+        }
+    }
+}

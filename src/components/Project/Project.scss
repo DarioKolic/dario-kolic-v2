@@ -1,0 +1,67 @@
+@use '../../app/variables.scss' as *;
+
+.project {
+    &__image {
+        width: 100%;
+        position: relative ;
+        aspect-ratio: 16/7;
+        border: 1px solid $border;
+        border-radius: 8px;
+        overflow: hidden;
+        img {
+        object-fit: cover;
+        object-position: top;
+
+        }
+    }
+    &__website {
+        width: 180%;
+        height: 181%;
+        transform: scale(0.555);
+        top: -40%;
+        left: -40%;
+        position: absolute;
+        pointer-events: none;
+        border: 0;
+        outline: 0;
+    }
+    &__skills {
+        margin-top: 12px;
+        display: flex; 
+        align-items: center;
+        gap: 8px;
+        overflow: hidden;
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 100%;
+            width: 80px;
+            background: linear-gradient(90deg,rgba(255, 255, 255, 0) 0%, rgba(21, 21, 21, 1) 100%);
+        }
+    }
+    &__title {
+        margin-top: 16px;
+        font-size: 24px;
+        font-weight: 500;
+    }
+    &__footer {
+        display: flex;
+        // align-items: center;
+        justify-content: space-between;
+        gap: 8px;
+        margin: 12px 0 16px 0;
+    }
+    &__description {
+        margin-top: 8px;
+        font-size: 16px;
+        max-width: 75%;
+        display: -webkit-box;
+        -webkit-line-clamp: 3; /* Limits to 2 lines */
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis; /* Adds ellipsis (...) for overflow */
+    }
+}

@@ -1,0 +1,63 @@
+@use '../../app/variables.scss' as *;
+
+.about {
+    width: 100%;
+    color: $text;
+
+    &__title {
+        font-weight: 400;
+        font-size: 36px;
+        border-bottom: 12px solid $background-secondary;
+        line-height: 18px;
+        width: fit-content;
+        padding: 0 16px 0 4px;
+        b {
+            font-weight: 700;
+        }
+        @media screen and (max-width: 361px) {
+            font-size: 28px;
+        }
+    }
+    &__summary {
+        margin-top: 12px;
+        font-size: 18px;
+        font-weight: 300;
+        color: $text;
+    }
+    &__button-group {
+        margin-top: 40px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+    &__tags {
+        margin-top: 64px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        @media screen and (max-width: 512px) {
+            display: none;
+        }
+    }
+    &__text {
+        margin-top: 64px;
+    }
+    &__sub-title {
+        font-size: 28px;
+        font-weight: 500;
+        margin: 0 0 24px 0;
+        border-bottom: 8px solid $background-secondary;
+        border-left: 8px solid $background-secondary;
+        line-height: 16px;
+        width: fit-content;
+        padding: 0 4px 0 0;
+    }
+    &__paragraph {
+        line-height: 20px;
+        font-size: 16px;
+        color: $text;
+        margin: 16px 0;
+    }
+}

@@ -1,0 +1,36 @@
+@use '../../app/variables.scss' as *;
+
+.ai-chat {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    height: 100%;
+    width: 100%;
+    padding: 0 16px;
+    &__title {
+        font-size: 24px;
+        font-weight: 400;
+    }
+    &__message {
+        margin-top: 32px;
+      
+        &-user {
+            font-size: 18px;
+            font-weight: 500;
+        }
+        &-content {
+            margin-top: 8px;
+            * {
+                margin: initial;
+                text-decoration: initial;
+            }
+            a {
+                color: $accent-secondary;
+            }
+        }
+    }
+    &__footer {
+        margin-top: auto;
+        padding: 0 0 12px 0;
+    }
+}

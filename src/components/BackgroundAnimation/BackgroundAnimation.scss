@@ -1,0 +1,14 @@
+@use '../../app/variables.scss' as *;
+
+.background-container {
+    position: fixed;
+    height: 100%;
+    inset: 0;
+    z-index: 0;
+}
+  
+.background-canvas {
+    inset: 0;
+    background: $background;
+    height: 100%;
+  }

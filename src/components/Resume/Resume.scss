@@ -1,0 +1,23 @@
+@use '../../app/variables.scss' as *;
+
+.resume {
+    width: 100%;
+    &__title {
+        font-size: 28px;
+        font-weight: 500;
+        margin: 0 0 12px 0;
+        border-bottom: 8px solid $background-secondary;
+        border-left: 8px solid $background-secondary;
+        line-height: 16px;
+        width: fit-content;
+        padding: 0 4px 0 0;
+    }
+    &__summary {
+        font-size: 16px;
+        font-weight: 300;
+        color: $text;
+    }
+    &__content {
+        margin-top: 24px;
+    }
+}

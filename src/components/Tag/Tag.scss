@@ -1,0 +1,24 @@
+@use '../../app/variables.scss' as *;
+
+.tag {
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 4px 8px;
+    width: fit-content;
+    &__icon {
+        font-size: 18px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__content {
+        font-size: 14px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

@@ -1,0 +1,39 @@
+@use '../../app/variables.scss' as *;
+
+.cursor {
+    position: fixed;
+    width: 32px;
+    height: 32px;
+    border-radius: 100%;
+    background-color: $accent-secondary;
+    pointer-events: none;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.8;
+
+    &_hover {
+        mix-blend-mode: screen;
+        opacity: 1;
+        .cursor__dot {
+            background-color: $background;
+        }
+
+    }
+    &__dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 100%;
+    }
+
+    @media (hover: none) and (pointer: coarse) {
+        display: none;
+        cursor: default;
+    }
+
+    @media screen and (max-width: 1024px) {
+        display: none;
+        cursor: default;
+    }
+}

@@ -1,0 +1,82 @@
+@use '../../../app/variables.scss' as *;
+
+.case-study {
+    &__image {
+        width: 100%;
+        position: relative ;
+        aspect-ratio: 16/7;
+        border: 1px solid $border;
+        border-radius: 8px;
+        overflow: hidden;
+        z-index: 2;
+        img {
+            object-fit: cover;
+            object-position: top;
+        }
+    }
+    &__content {
+        padding: 20px 12px 12px 12px;
+    }
+    &__website {
+        width: 180%;
+        height: 181%;
+        transform: scale(0.555);
+        top: -40%;
+        left: -40%;
+        position: absolute;
+        pointer-events: none;
+        border: 0;
+        outline: 0;
+    }
+    &__skills {
+        margin-top: 12px;
+        display: flex; 
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+    &__title {
+        margin-top: 16px;
+        font-size: 28px;
+        font-weight: 600;
+    }
+    &__sub-title {
+        margin: 42px 0 12px 0;
+        font-size: 18px;
+        font-weight: 500;
+    }
+    &__paragraph {
+        margin-top: 8px;
+        font-size: 16px;
+        & > p {
+            margin: 12px 0 4px 0;
+        }
+        &_feedback {
+            position: relative;
+            margin-top: 42px;
+            font-style: italic;
+            &::before,
+            &::after {
+                font-size: 42px;
+                color: var(--quote-border-color);
+                font-weight: bold;
+                position: absolute;
+            }
+
+            &::before {
+                content: "“";
+                left: -32px;
+                top: -24px;
+            }
+
+            &::after {
+                content: "”";
+                right: 12px;
+                bottom: -24px;
+            }
+        }
+    }
+    &__achievements {
+        padding: 0 16px;
+    }
+}
