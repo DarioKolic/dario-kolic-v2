@@ -59,7 +59,7 @@ export const metadata: Metadata = {
     siteName: "Dario Kolic Portfolio",
     images: [
       {
-        url: "https://www.dariokolic.com/og-image.png", // Replace with your actual OG image URL
+        url: "https://www.dariokolic.com/og_image.png", // Replace with your actual OG image URL
         width: 1200,
         height: 630,
         alt: "Dario Kolic - Full-Stack & AI App Development",
