@@ -10,7 +10,8 @@ import { Cursor } from "@/components/Cursor/Cursor";
 import BackgroundAnimation from "@/components/BackgroundAnimation/BackgroundAnimation";
 
 const sourceCodePro = Source_Code_Pro({
-  weight: ['200', '300', '400', '500', '600', '700', '800', '900']
+  weight: ['200', '300', '400', '500', '600', '700', '800', '900'],
+  subsets: ['latin', 'cyrillic']
 });
 export const metadata: Metadata = {
   title: {
