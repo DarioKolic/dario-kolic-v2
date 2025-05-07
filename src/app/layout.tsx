@@ -14,6 +14,7 @@ const sourceCodePro = Source_Code_Pro({
   subsets: ['latin']
 });
 export const metadata: Metadata = {
+  metadataBase: new URL('https://www.dariokolic.com/'),
   title: {
     default: "Dario Kolic | Full-Stack & AI App Development Services",
     template: "%s | Dario Kolic",
@@ -51,27 +52,12 @@ export const metadata: Metadata = {
     "Problem Solving",
     "Software Architect",
   ],
-  // openGraph: {
-  //   title: "Dario Kolic | Full-Stack & AI App Development Services",
-  //   description:
-  //     "Expert full-stack web and innovative AI app development by Dario Kolic. Specializing in MERN stack, AI Chatbots, and more. View portfolio and contact now!",
-  //   url: "https://www.dariokolic.com",
-  //   siteName: "Dario Kolic Portfolio",
-  //   locale: "en_US",
-  //   type: "website",
-  // },
   robots: {
     index: true,
     follow: true,
     nocache: false,
   },
-  // Optional:
-  // themeColor: "#ffffff", // Add your website's theme color
-  // icons: {
-  //   icon: '/favicon.ico',
-  //   apple: '/apple-touch-icon.png',
-  // },
-  // viewport: 'width=device-width, initial-scale=1',
+
 };
 
 export const viewport: Viewport = {
