@@ -4,10 +4,10 @@ import { AppLayout } from "@/components/AppLayout/AppLayout";
 import { ThemeProvider } from "@mui/material";
 import { theme } from "@/lib/theme";
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v15-appRouter';
-
-import "./globals.scss";
 import { Cursor } from "@/components/Cursor/Cursor";
 import BackgroundAnimation from "@/components/BackgroundAnimation/BackgroundAnimation";
+
+import "./globals.scss";
 
 const sourceCodePro = Source_Code_Pro({
   weight: ['200', '300', '400', '500', '600', '700', '800', '900'],
