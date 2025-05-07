@@ -10,6 +10,7 @@ import { IMessage } from "@/lib/interfaces"
 
 import './AppLayout.scss'
 
+
 export const AppLayout: React.FC<PropsWithChildren> = ({ children }) => {
     const postMessageRequest = async (message: string, previousMessages: IMessage[]) => {
         "use server"
