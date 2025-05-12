@@ -49,9 +49,6 @@ export const Project: React.FC<IProjectProps> = ({
                     )
                 })}
             </div>
-
-
-            
         </div>
     )
 }

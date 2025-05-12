@@ -2,6 +2,7 @@ import React from 'react'
 import { IProject } from '@/lib/interfaces'
 
 import './ResumeItem.scss'
+import Link from 'next/link'
 
 interface IResumeItemProps {
     project: IProject
@@ -11,9 +12,9 @@ export const ResumeItem: React.FC<IResumeItemProps> = ({ project }) => {
     return (
         <div className='resume-item'>
             <div className='resume-item__header'>
-                <a className='resume-item__company'>
+                <Link className='resume-item__company' href={project.website} target='_blank'>
                     {project.company},
-                </a>
+                </Link>
                 {project.location} — <i>{project.role}</i>
             </div>
 
