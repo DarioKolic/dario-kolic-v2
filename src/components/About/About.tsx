@@ -14,7 +14,7 @@ export const About = () => {
     const { handleOpenAIChat } = useAIContext()
 
     const navigateToUpwork = useCallback(() => {
-        window.open("https://www.upwork.com/freelancers/~0123658382c9cb797f", "_blank")
+        window.open("", "_blank")
     }, [])
 
     return (
@@ -23,8 +23,13 @@ export const About = () => {
             <h5 className="about__summary">I&apos;m a Front-end focused Full-stack developer. I specialise in web application development and thrive in Startup environments</h5>
 
             <div className="about__button-group">
-                <Button label="Contact me" icon={<IoMail />} onClick={navigateToUpwork}/>
-                <Button label="Download CV" variant="outlined" icon={<IoDocumentText />} />
+                <Link href='https://www.upwork.com/freelancers/~0123658382c9cb797f' target="_blank">
+                    <Button label="Contact me" icon={<IoMail />} onClick={navigateToUpwork}/>
+                </Link>
+
+                <Link href='/cv/dario-kolic-resume-uw.pdf' target="_blank" prefetch>
+                    <Button label="Download CV" variant="outlined" icon={<IoDocumentText />} />
+                </Link>
             </div>
 
             <div className="about__tags">
