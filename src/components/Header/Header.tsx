@@ -1,10 +1,8 @@
 import React from "react";
+import Link from "next/link";
+import { IoConstruct } from "react-icons/io5";
 
 import './Header.scss'
-import Link from "next/link";
-// interface IHeaderProps {
-    
-// }
 
 export const Header = () => {
 
@@ -20,6 +18,10 @@ export const Header = () => {
 
             <Link href="/#resume" className="header__item">
                 Resume
+            </Link>
+
+            <Link href="/resources" className="header__item header__item_special">
+                <IoConstruct /> Resources
             </Link>
         </div>
     )

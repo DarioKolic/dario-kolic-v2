@@ -26,8 +26,20 @@
         font-weight: 500;
         font-size: 14px;
         color: $text;
+        display: flex;
+        align-items: center;
+        gap: 4px;
         &:hover {
             background-color: $background-secondary;
+        }
+        &_special {
+            background-color: $background-secondary;
+            &:hover {
+                background-color: $accent-secondary;
+            }
+        }
+        svg {
+            font-size: 18px;
         }
     }
 

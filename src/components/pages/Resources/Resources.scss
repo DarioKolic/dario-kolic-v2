@@ -1,0 +1,47 @@
+@use '../../../app/variables.scss' as *;
+
+.resources {
+    &__title {
+        font-size: 28px;
+        text-align: center;
+    }
+    &__content {
+        margin-top: 42px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 16px;
+        max-height: 720px;
+        @media screen and (max-width: 798px) {
+            max-height: none;
+        }
+    }
+    &__item {
+        display: block;
+        max-width: calc(50% - 8px);
+        width: 100%;
+        padding: 16px;
+        background-color: $background;
+        border: 1px solid $border;
+        border-radius: 8px;
+        height: fit-content;
+        &-title {
+            font-size: 20px;
+            color: $accent;
+        }
+        &-description {
+            margin-top: 8px;
+            font-size: 14px;
+            color: $detail;
+        }
+        &_blurred {
+            filter: blur(12px);
+            opacity: 0.8;
+            pointer-events: none;
+        }
+        @media screen and (max-width: 798px) {
+            max-width: none;
+        }
+    }
+
+}

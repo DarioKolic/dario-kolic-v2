@@ -114,7 +114,7 @@ export const AppLayout: React.FC<PropsWithChildren> = ({ children }) => {
     return (
         <NavigationContextProvider>
             <AIContextProvider postMessageRequest={postMessageRequest} >
-                <div className="app-layout">
+                <div className="app-layout" id="about">
                     <Header />
 
                     <AIChat />

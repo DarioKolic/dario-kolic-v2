@@ -18,7 +18,7 @@ export const About = () => {
     }, [])
 
     return (
-        <div className="about" id="about">
+        <div className="about">
             <h1 className="about__title">Hi, I&apos;m Dario</h1>
             <h5 className="about__summary">I&apos;m a Front-end focused Full-stack developer. I specialise in web application development and thrive in Startup environments</h5>
 
