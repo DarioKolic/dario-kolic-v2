@@ -1,10 +1,10 @@
-import React, { useCallback } from "react";
+import React from "react";
 import { IProject } from "@/lib/interfaces";
 import { SkillDisplay } from "../SkillDisplay/SkillDisplay";
 import { Button } from "../Button/Button";
 import { IoEye } from "react-icons/io5";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 import "./Project.scss"
 
@@ -15,12 +15,6 @@ interface IProjectProps {
 export const Project: React.FC<IProjectProps> = ({
     project
 }) => {
-    const { push } = useRouter()
-
-    const navigateToCaseStudy = useCallback(() => {
-        push(`/case-study/${project.company.toLowerCase()}`)
-    }, [push, project.company])
-
     return (
         <div className="project">
             <div className="project__title">
@@ -32,14 +26,15 @@ export const Project: React.FC<IProjectProps> = ({
                     {project.caseStudy.description}
                 </div>
 
-                <Button
-                    label="View Case study"
-                    icon={<IoEye />}
-                    onClick={navigateToCaseStudy}
-                    sx={{
-                        minWidth: "182px"
-                    }}
-                />
+                <Link className="project__link" href={`/case-study/${project.company.toLowerCase()}`}>
+                    <Button
+                        label="View Case study"
+                        icon={<IoEye />}
+                        sx={{
+                            minWidth: "182px"
+                        }}
+                    />
+                </Link>
             </div>
 
             <div className="project__image">

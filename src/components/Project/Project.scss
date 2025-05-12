@@ -14,16 +14,12 @@
 
         }
     }
-    &__website {
-        width: 180%;
-        height: 181%;
-        transform: scale(0.555);
-        top: -40%;
-        left: -40%;
-        position: absolute;
-        pointer-events: none;
-        border: 0;
-        outline: 0;
+    &__link {
+        display: block;
+        height: auto;
+        button {
+            height: 100%;
+        }
     }
     &__skills {
         margin-top: 12px;

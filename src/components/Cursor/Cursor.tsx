@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 
 import "./Cursor.scss"
 import clsx from "clsx";
+import { usePathname } from "next/navigation";
 
 export const Cursor: React.FC = () => {
     const [isHovering, setIsHovering] = useState(false)
@@ -12,6 +13,7 @@ export const Cursor: React.FC = () => {
         x: 0,
         y: 0,
     });
+    const pathname = usePathname()
 
     const handleMouseMove = (e: MouseEvent) => {
         setMousePosition({ x: e.clientX, y: e.clientY });
@@ -24,7 +26,6 @@ export const Cursor: React.FC = () => {
         const queryElements = document.querySelectorAll('a, button, [data-hover]')
 
         queryElements.forEach(e => {
-            console.log({e})
             e.addEventListener('mouseenter', handleMouseEnter)
             e.addEventListener('mouseleave', handleMouseLeave)
         })
@@ -39,7 +40,7 @@ export const Cursor: React.FC = () => {
 
             window.removeEventListener("mousemove", handleMouseMove);
         };
-    }, []);
+    }, [pathname]);
 
     return (
         <motion.div
@@ -57,7 +58,7 @@ export const Cursor: React.FC = () => {
                 damping: 28,
             }}
         >
-            <div className="cursor__dot"></div>
+            <div className="cursor__dot" />
         </motion.div>
     );
 };

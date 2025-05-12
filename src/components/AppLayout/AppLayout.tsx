@@ -106,7 +106,6 @@ export const AppLayout: React.FC<PropsWithChildren> = ({ children }) => {
             experimental_telemetry: { isEnabled: false },
         })
             .then(res => {
-                console.log(res.text)
                 return JSON.parse(res.text)
             })
     }
