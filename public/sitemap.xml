@@ -1,0 +1,33 @@
+<urlset xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+    <url>
+        <loc>https://www.dariokolic.com/</loc>
+        <lastmod>2025-05-12T17:39:52+00:00</lastmod>
+        <priority>1.00</priority>
+    </url>
+
+    <url>
+        <loc>https://www.dariokolic.com/resources</loc>
+        <lastmod>2025-05-12T17:39:52+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+
+    <url>
+        <loc>
+        https://www.dariokolic.com/cv/dario-kolic-resume-uw.pdf
+        </loc>
+        <lastmod>2025-05-12T17:39:51+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+
+    <url>
+        <loc>https://www.dariokolic.com/case-study/humy.ai</loc>
+        <lastmod>2025-05-12T17:39:52+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+
+    <url>
+        <loc>https://www.dariokolic.com/case-study/yayloh</loc>
+        <lastmod>2025-05-12T17:39:52+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+</urlset>
