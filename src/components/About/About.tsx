@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useCallback } from "react";
+import React from "react";
 import { Button } from "../Button/Button";
 import { Tag } from "../Tag/Tag";
 import { IoCalendar, IoLogoGithub, IoDocumentText, IoGitCommit, IoHourglass, IoMail, IoChatbubbleEllipses } from "react-icons/io5";
@@ -13,10 +13,6 @@ import './About.scss'
 export const About = () => {
     const { handleOpenAIChat } = useAIContext()
 
-    const navigateToUpwork = useCallback(() => {
-        window.open("", "_blank")
-    }, [])
-
     return (
         <div className="about">
             <h1 className="about__title">Hi, I&apos;m Dario</h1>
@@ -24,7 +20,7 @@ export const About = () => {
 
             <div className="about__button-group">
                 <Link href='https://www.upwork.com/freelancers/~0123658382c9cb797f' target="_blank">
-                    <Button label="Contact me" icon={<IoMail />} onClick={navigateToUpwork}/>
+                    <Button label="Contact me" icon={<IoMail />} />
                 </Link>
 
                 <Link href='/cv/dario-kolic-resume-uw.pdf' target="_blank" prefetch>
