@@ -9,7 +9,7 @@ export const Header = () => {
     return (
         <div className="header">
             <Link href="/#about"  className="header__item">
-                About me
+                About
             </Link>
 
             <Link href="/#work" className="header__item">
