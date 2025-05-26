@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { v4 } from 'uuid'
 import clsx from 'clsx'
+import Masonry, {ResponsiveMasonry} from "react-responsive-masonry"
 
 import './Resources.scss'
 
@@ -15,10 +16,9 @@ const resources = [
     },
     {
         id: v4(),
-        name: "Lorem Ipsum",
-        url: "#",
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt est debitis autem itaque eius vitae neque totam qui consequuntur?",
-        isBlurred: true
+        name: "Gemini vs Claude: AI Coding Assistants",
+        url: "https://medium.com/@dariokolic/gemini-vs-claude-a-developers-guide-to-ai-coding-assistants-ee46afd09c09",
+        description: "This comprehensive guide compares Google's Gemini Pro and Anthropic's Claude as AI-powered development tools, examining their distinct approaches to coding assistance and helping developers choose the right tool for their specific needs.",
     },
     {
         id: v4(),
@@ -34,7 +34,6 @@ const resources = [
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla ad quae maiores perferendis quis. Quod saepe itaque est sit. ",
         isBlurred: true
     },
-
     {
         id: v4(),
         name: "Lorem Ipsum",
@@ -42,6 +41,7 @@ const resources = [
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod saepe itaque est sit.",
         isBlurred: true
     },
+
     {
         id: v4(),
         name: "Lorem Ipsum sit",
@@ -73,31 +73,40 @@ export const Resources: React.FC = ({
                 Resources
            </div>
 
+           <ResponsiveMasonry
+                className='resources__content'
+                columnsCountBreakPoints={{ 320: 1, 1024: 2 }}
+            >
+                <Masonry gutter='16px'>
+                    {resources.map(resource => {
+                        return (
+                            <Link
+                                key={resource.id} 
+                                href={resource.url}
+                                className={clsx('resources__item', {
+                                    "resources__item_blurred": resource.isBlurred
+                                })}
+                                target='_blank'
+                                prefetch
+                            >
+                                <div
+                                    className='resources__item-title'
+                                >
+                                    {resource.name}
+                                </div>
+                                <div
+                                    className='resources__item-description'
+                                >
+                                    {resource.description}
+                                </div>
+                            </Link>
+                        )
+                    })} 
+                </Masonry>
+            </ResponsiveMasonry>
+
            <div className='resources__content'>
-                {resources.map(resource => {
-                    return (
-                        <Link
-                            key={resource.id} 
-                            href={resource.url}
-                            className={clsx('resources__item', {
-                                "resources__item_blurred": resource.isBlurred
-                            })}
-                            target='_blank'
-                            prefetch
-                        >
-                            <div
-                                className='resources__item-title'
-                            >
-                                {resource.name}
-                            </div>
-                            <div
-                                className='resources__item-description'
-                            >
-                                {resource.description}
-                            </div>
-                        </Link>
-                    )
-                })}
+                
            </div>
         </div>
     )

@@ -7,18 +7,10 @@
     }
     &__content {
         margin-top: 42px;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        gap: 16px;
-        max-height: 720px;
-        @media screen and (max-width: 798px) {
-            max-height: none;
-        }
+        
     }
     &__item {
         display: block;
-        max-width: calc(50% - 8px);
         width: 100%;
         padding: 16px;
         background-color: $background;
@@ -38,9 +30,6 @@
             filter: blur(12px);
             opacity: 0.8;
             pointer-events: none;
-        }
-        @media screen and (max-width: 798px) {
-            max-width: none;
         }
     }
 
