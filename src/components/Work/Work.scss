@@ -2,6 +2,7 @@
 
 .work {
     width: 100%;
+    color: $text;
     &__title {
         font-size: 28px;
         font-weight: 500;
@@ -10,6 +11,7 @@
         border-left: 8px solid $background-secondary;
         line-height: 16px;
         width: fit-content;
+        color: $text;
         padding: 0 4px 0 0;
     }
     &__summary {

@@ -11,6 +11,7 @@
         line-height: 18px;
         width: fit-content;
         padding: 0 16px 0 4px;
+        color: $text;
         b {
             font-weight: 700;
         }
@@ -43,6 +44,8 @@
     }
     &__text {
         margin-top: 64px;
+        color: $text;
+
     }
     &__sub-title {
         font-size: 28px;

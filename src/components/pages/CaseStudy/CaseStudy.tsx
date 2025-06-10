@@ -70,7 +70,7 @@ export const CaseStudy: React.FC<ICaseStudyProps> = ({
                 <ul className='case-study__achievements'>
                     {project.achievements.map(x => {
                         return (
-                            <li key={x}>
+                            <li className='case-study__achievements-item' key={x}>
                                 {x}
                             </li>
                         )

@@ -11,21 +11,29 @@
         font-size: 20px;
         line-height: 26px;
         flex-wrap: wrap;
+        color: $text;
     }
     &__company {
         font-weight: 600;
+        color: $text;
     }
     &__timespan {
+        color: $text;
         font-size: 14px;
         font-weight: 300;
         line-height: 28px;
     }
     &__achievements {
+        color: $text;
         margin-top: 8px;
         padding-left: 32px;
     }
+    &__achievements-item {
+        color: $text;
+    }
     &__skills {
         margin-top: 8px;
+        color: $text;
         font-style: italic;
         font-weight: 200;
     }

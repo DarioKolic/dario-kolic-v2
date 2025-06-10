@@ -27,6 +27,7 @@
         pointer-events: none;
         border: 0;
         outline: 0;
+        color: $text;
     }
     &__skills {
         margin-top: 12px;
@@ -38,20 +39,25 @@
     &__title {
         margin-top: 16px;
         font-size: 28px;
+        color: $text;
         font-weight: 600;
     }
     &__sub-title {
+        color: $text;
         margin: 42px 0 12px 0;
         font-size: 18px;
         font-weight: 500;
     }
     &__paragraph {
+        color: $text;
         margin-top: 8px;
         font-size: 16px;
         & > p {
+        color: $text;
             margin: 12px 0 4px 0;
         }
         &_feedback {
+            color: $text;
             position: relative;
             margin-top: 42px;
             font-style: italic;
@@ -77,6 +83,10 @@
         }
     }
     &__achievements {
+        color: $text;
         padding: 0 16px;
+    }
+    &__achievements-item {
+        color: $text;
     }
 }

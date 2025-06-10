@@ -25,7 +25,7 @@ export const ResumeItem: React.FC<IResumeItemProps> = ({ project }) => {
             <ul className='resume-item__achievements'>
                 {project.achievements.map(a => {
                     return (
-                        <li key={a}>{a}</li>
+                        <li className='resume-item__achievements-item' key={a}>{a}</li>
                     )
                 })}
             </ul>
