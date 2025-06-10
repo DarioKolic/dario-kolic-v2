@@ -6,6 +6,7 @@ import { Work } from '@/components/Work/Work'
 
 
 import './Homepage.scss'
+import { Footer } from '@/components/Footer/Footer'
 
 export const Homepage = async () => {
     return (
@@ -14,6 +15,7 @@ export const Homepage = async () => {
             <Work />
             <Resume />
             {/* <Contact /> */}
+            <Footer />
         </div>
     )
 }
