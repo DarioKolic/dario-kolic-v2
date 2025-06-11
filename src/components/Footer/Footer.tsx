@@ -1,8 +1,8 @@
 import { IoLogoGithub, IoLogoMedium  } from 'react-icons/io5'
 import { FaSquareUpwork } from "react-icons/fa6";
+import Link from 'next/link'
 
 import './Footer.scss'
-import Link from 'next/link'
 
 export const Footer = () => {
     return (
@@ -12,7 +12,7 @@ export const Footer = () => {
             </div>
 
             <div className='footer__links'>
-                <Link 
+                <Link
                     href="https://www.upwork.com/freelancers/~0123658382c9cb797f" 
                     className='footer__link'
                     data-hover
@@ -22,17 +22,7 @@ export const Footer = () => {
                     <FaSquareUpwork />
                 </Link>
 
-                <Link 
-                    href="https://medium.com/@dariokolic" 
-                    className='footer__link'
-                    data-hover
-                    target='_blank'
-                    rel="noreferrer"
-                >
-                    <IoLogoMedium  />
-                </Link>
-
-                <Link 
+                <Link
                     href="https://github.com/DarioKolic" 
                     className='footer__link'
                     data-hover
@@ -40,6 +30,16 @@ export const Footer = () => {
                     rel="noreferrer"
                 >
                     <IoLogoGithub />
+                </Link>
+
+                <Link
+                    href="https://medium.com/@dariokolic" 
+                    className='footer__link'
+                    data-hover
+                    target='_blank'
+                    rel="noreferrer"
+                >
+                    <IoLogoMedium  />
                 </Link>
             </div>
 
