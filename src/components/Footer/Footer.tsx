@@ -1,4 +1,4 @@
-import { IoLogoGithub, IoLogoLinkedin, IoLogoMedium  } from 'react-icons/io5'
+import { IoLogoGithub, IoLogoMedium  } from 'react-icons/io5'
 import { FaSquareUpwork } from "react-icons/fa6";
 
 import './Footer.scss'
