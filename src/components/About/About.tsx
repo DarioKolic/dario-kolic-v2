@@ -8,6 +8,7 @@ import Link from "next/link";
 import { useAIContext } from "@/lib/context/AIContext";
 
 import './About.scss'
+import Image from "next/image";
 
 
 export const About = () => {
@@ -35,15 +36,21 @@ export const About = () => {
 
                 <Tag icon={<IoGitCommit />}>5K+ hours</Tag>
 
-                <Tag icon={<IoHourglass />}>from 32$/hr</Tag>
+                <Tag icon={<IoHourglass />}>from $36/hr</Tag>
             </div>
 
-            <div className="about__text">
-                <h3 className="about__sub-title">Bio</h3>
-                <p className="about__paragraph">Self-taught, proactive and self-driven web developer. I first came in touch with programming for the web 10 years ago.</p>
-                <p className="about__paragraph">Started by writing some basic plugins for CS 1.6 in php, later switched to Unityscript and Unity engine for game development.</p>
-                <p className="about__paragraph">Unityscript is based on Javascript, so it was a nice intro (and a complex one) to web development and Javascript in general.</p>
-                <p className="about__paragraph">Since 2019 I&apos;ve been coding with passion for the web, solving complex problems and building major business features for startups.</p>
+            <div className="about__bio">
+                <div className="about__text">
+                    <h3 className="about__sub-title">Bio</h3>
+                    <p className="about__paragraph">Self-taught, proactive and self-driven web developer. I first came in touch with programming for the web 10 years ago.</p>
+                    <p className="about__paragraph">Started by writing some basic plugins for CS 1.6 in php, later switched to Unityscript and Unity engine for game development.</p>
+                    <p className="about__paragraph">Unityscript is based on Javascript, so it was a nice intro (and a complex one) to web development and Javascript in general.</p>
+                    <p className="about__paragraph">Since 2019 I&apos;ve been coding with passion for the web, solving complex problems and building major business features for startups.</p>
+                </div>
+                
+                <div className="about__image" data-hover>
+                    <Image src="/portret.jpg" fill objectFit="cover" objectPosition="52%" alt="Dario's portrait"/>
+                </div>
             </div>
 
             <div className="about__button-group">

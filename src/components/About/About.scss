@@ -32,6 +32,26 @@
         gap: 12px;
         flex-wrap: wrap;
     }
+    &__bio {
+        margin-top: 128px;
+        display: flex;
+        align-items: center;
+        gap: 32px;
+        height: 352px;
+        width: 100%;
+    }
+    &__image {
+        position: relative;
+        width: 33%;
+        border-radius: 12px;
+        overflow: hidden;
+        height: 100%;
+        box-shadow: 0 0 24px 8px rgba(93, 30, 140, 0.2);
+        transition: transform 0.31s ease;
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
     &__tags {
         margin-top: 64px;
         display: flex;
@@ -43,9 +63,8 @@
         }
     }
     &__text {
-        margin-top: 64px;
         color: $text;
-
+        width: 66%;
     }
     &__sub-title {
         font-size: 28px;
