@@ -47,7 +47,6 @@ export const postMessageRequest = async (message: string, previousMessages: IMes
                 You are on your personal website talking to users who enter the website.
                 Do not give your website URL, users already know it.
                 Do not ask to share portfolio, users are already in portfolio.
-                User full name you are conversing with: ${user.user_metadata.full_name}.
                 Your past employments:
                 ${JSON.stringify([
                 "Humy.ai, Stockholm — Front-end Developer July 2023 - April 2025 - Facilitated the transition from mobile apps to web applications, resulting in a 300% increase in annual revenue - Helped secure a pre-seed funding round by leading development in Next.js - Built compliant authentication that led to contact with enterprise clients such as Nyack Public Schools - Built major business features on the front-end and internationalization to 44 languages - Increased quality of AI responses by utilizing prompt engineering Skills: Next.js, React, Auth0, Stripe, Azure, Vercel, Github, SCSS, Ant Design, Virtualization, CosmosDB",
@@ -70,6 +69,7 @@ export const postMessageRequest = async (message: string, previousMessages: IMes
                 ${user.is_anonymous ? "Adhere to Upwork Terms of Service." : ""}
                 You can ask for feedback from users to ask them what they think about the website. Ask once after 2 user messages.
                 Do not talk about any other topic other than web development (exclude skills you don't know from past employments), and cooking if specifically asked.
+                ${user.user_metadata.full_name ? `Greet the user by their name, full name: ${user.user_metadata.full_name}` : ""}
             `,
             messages: messages,
             experimental_telemetry: { isEnabled: false },
