@@ -115,7 +115,7 @@ export const AIChat: React.FC<IAIChat> = ({ isIntercepted }) => {
                 </div>
                 <p className="ai-chat__footer-text">
                     <IoInformationCircle />
-                    Messages are not yet stored and refreshing the page will delete the conversation.
+                    Messages are not yet stored and refreshing the page will delete the conversation
                 </p>
             </div>
         </div>
