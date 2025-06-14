@@ -8,4 +8,5 @@ Disallow: /build/
 Disallow: /out/
 Disallow: /node_modules/
 Disallow: /cv/dario-kolic-resume-uw.pdf
+Disallow: /chat
 Sitemap: https://www.dariokolic.com/sitemap.xml
