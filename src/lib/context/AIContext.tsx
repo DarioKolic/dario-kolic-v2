@@ -58,7 +58,7 @@ export const AIContextProvider: React.FC<PropsWithChildren> = ({ children }) => 
     const handleCloseAIChat = useCallback(() => {
         setIsChatOpen(false)
 
-        router.back()
+        router.push('/')
     }, [router])
 
     const handleSendMessage = useCallback(async (message: string, previousMessages: IMessage[]) => {
