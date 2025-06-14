@@ -25,8 +25,7 @@
     &__title-summary {
         font-size: 14px;
         margin-top: 8px;
-        font-weight: 200;
-        color: $text;
+        color: $detail;
     }
 
     &__header {
@@ -100,18 +99,33 @@
     }
     
     &__footer {
-        flex-shrink: 0; // Prevent footer from shrinking
-        padding: 0;
-        border-top: 1px solid rgba(0, 0, 0, 0.1); // Optional: visual separator
-        background: inherit; // Ensure background matches container
+        &-inner {
+            flex-shrink: 0; // Prevent footer from shrinking
+            padding: 0;
+            border-top: 1px solid rgba(0, 0, 0, 0.1); // Optional: visual separator
+            background: inherit; // Ensure background matches container
 
-        display: flex;
-        align-items: center;
-        flex-direction: row;
-        width: 100%;
-        gap: 12px;
-        form {
+            display: flex;
+            align-items: center;
+            flex-direction: row;
             width: 100%;
+            gap: 12px;
+            form {
+                width: 100%;
+            }
         }
+
+        &-text {
+            margin-top: 4px;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            color: $detail;
+            svg {
+                font-size: 16px;
+            }
+        }
+       
     }
 }

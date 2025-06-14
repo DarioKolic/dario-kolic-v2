@@ -5,7 +5,7 @@ import { useAIContext } from "@/lib/context/AIContext";
 import { Input } from "../Input/Input";
 import { stopPropagating } from "@/lib/utils/global";
 import Markdown from "react-markdown";
-import { IoChatboxEllipses, IoClose, IoExitOutline } from "react-icons/io5";
+import { IoChatboxEllipses, IoClose, IoExitOutline, IoInformationCircle } from "react-icons/io5";
 import { Button } from "../Button/Button";
 import { Avatar } from "@mui/material";
 import clsx from "clsx";
@@ -48,7 +48,9 @@ export const AIChat: React.FC<IAIChat> = ({ isIntercepted }) => {
                         <IoChatboxEllipses /> Chat with my AI Persona
                     </h3>
 
-                    <p className="ai-chat__title-summary">My AI is limited and on free version to avoid a big bill. Please be reasonable and don&apos;t overuse.</p>
+                    <p className="ai-chat__title-summary">
+                        My AI is limited and on free version to avoid a big bill. Please be reasonable and don&apos;t overuse as there is no limit to how many messages you can send.
+                    </p>
                 </div>
 
                 <Button
@@ -60,7 +62,7 @@ export const AIChat: React.FC<IAIChat> = ({ isIntercepted }) => {
                         padding: '4px',
                         width: "40px",
                         height: '40px',
-                        minWidth: 0
+                        minWidth: '40px'
                     }}
                 />
             </div>
@@ -90,25 +92,31 @@ export const AIChat: React.FC<IAIChat> = ({ isIntercepted }) => {
             </div>
             
             <div className="ai-chat__footer">
-                <form onSubmit={handleSubmitMessage}>
-                    <Input
-                        onChange={handleChangeChatMessage}
-                        value={chatMessage}
-                        placeholder="👋 Ask me anything..."
-                    />
-                </form>
+                <div className="ai-chat__footer-inner">
+                    <form onSubmit={handleSubmitMessage}>
+                        <Input
+                            onChange={handleChangeChatMessage}
+                            value={chatMessage}
+                            placeholder="👋 Ask me anything..."
+                        />
+                    </form>
 
-                <Button
-                    label={<IoExitOutline />}
-                    onClick={signOut}
-                    sx={{
-                        background: "transparent",
-                        boxShadow: 'none',
-                        minWidth: 0,
-                        padding: '4px',
-                        fontSize: '32px'
-                    }}
-                />
+                    <Button
+                        label={<IoExitOutline />}
+                        onClick={signOut}
+                        sx={{
+                            background: "transparent",
+                            boxShadow: 'none',
+                            minWidth: 0,
+                            padding: '4px',
+                            fontSize: '32px'
+                        }}
+                    />
+                </div>
+                <p className="ai-chat__footer-text">
+                    <IoInformationCircle />
+                    Messages are not yet stored and refreshing the page will delete the conversation.
+                </p>
             </div>
         </div>
     )
