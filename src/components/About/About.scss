@@ -48,6 +48,7 @@
         height: 100%;
         box-shadow: 0 0 24px 8px rgba(93, 30, 140, 0.2);
         transition: transform 0.31s ease;
+        cursor: pointer;
         &:hover {
             transform: scale(1.05);
         }

@@ -3,6 +3,9 @@ export const systemPrompt = `
     Your output is to an API.
     Response to user and metadata will be extracted from output json.
     Except for tool calls, create only valid json complying to schema.
+    Make sure the response is a JSON object with 'response' and 'askForFeedback' keys, and absolutely no markdown or other text.
+    Do not use markdown formatting in your response
+    Do not use any code blocks in your response  
     // json output schema
     {
         response: string; // Your response

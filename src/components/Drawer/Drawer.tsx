@@ -1,8 +1,8 @@
 "use client"
 
-import React, { PropsWithChildren } from "react";
+import React, { PropsWithChildren, useEffect } from "react";
 import clsx from "clsx";
-import { stopPropagating } from "@/lib/utils";
+import { stopPropagating } from "@/lib/utils/global";
 
 import './Drawer.scss'
 
@@ -16,6 +16,13 @@ export const Drawer: React.FC<IDrawerProps> = ({
     handleClose,
     children
 }) => {
+    useEffect(() => {
+        if(isOpen) {
+            document.body.style.overflow = 'hidden'
+        } else {
+            document.body.style.overflow = 'auto'
+        }
+    }, [isOpen])
 
     return (
         <div

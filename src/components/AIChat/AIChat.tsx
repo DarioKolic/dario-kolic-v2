@@ -1,60 +1,115 @@
 "use client"
 
-import React, { useCallback, useState } from "react";
-import { Drawer } from "../Drawer/Drawer";
+import React, { useCallback } from "react";
 import { useAIContext } from "@/lib/context/AIContext";
 import { Input } from "../Input/Input";
-import { stopPropagating } from "@/lib/utils";
+import { stopPropagating } from "@/lib/utils/global";
 import Markdown from "react-markdown";
+import { IoChatboxEllipses, IoClose, IoExitOutline } from "react-icons/io5";
+import { Button } from "../Button/Button";
+import { Avatar } from "@mui/material";
+import clsx from "clsx";
+import { signOut } from "@/app/auth/actions";
 
 import './AIChat.scss'
 
-export const AIChat = () => {
-    const { isChatOpen, handleCloseAIChat, handleSendMessage, messages } = useAIContext()
-    const [chatMessage, setChatMessage] = useState("")
+interface IAIChat {
+    isIntercepted?: boolean
+}
+
+export const AIChat: React.FC<IAIChat> = ({ isIntercepted }) => {
+    const {
+        handleCloseAIChat,
+        handleSendMessage,
+        messages,
+        chatMessage,
+        setChatMessage
+    } = useAIContext()
 
     const handleChangeChatMessage = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
         setChatMessage(e.target.value)
-    }, [])
+    }, [setChatMessage])
 
     const handleSubmitMessage = useCallback((e: React.FormEvent) => {
         stopPropagating(e)
+        setChatMessage("")
         handleSendMessage(chatMessage, messages)
-    }, [chatMessage, handleSendMessage, messages])
+    }, [chatMessage, handleSendMessage, messages, setChatMessage])
 
     return (
-        <Drawer 
-            // isOpen={isChatOpen || true}
-            isOpen={isChatOpen}
-            handleClose={handleCloseAIChat}
+        <div
+            className={clsx("ai-chat", {
+                "ai-chat_page": !isIntercepted
+            })}
         >
-            <div className="ai-chat">
-                <h3 className="ai-chat__title">Chat with my AI Persona</h3>
+            <div className="ai-chat__header">
+                <div className="ai-chat__header-content">
+                    <h3 className="ai-chat__title">
+                        <IoChatboxEllipses /> Chat with my AI Persona
+                    </h3>
 
-                <div className="ai-chat__messages">
-                    {messages.map(x => {
-                        return (
-                            <div key={x.id} className="ai-chat__message">
+                    <p className="ai-chat__title-summary">My AI is limited and on free version to avoid a big bill. Please be reasonable and don&apos;t overuse.</p>
+                </div>
+
+                <Button
+                    onClick={handleCloseAIChat}
+                    label={<IoClose />} 
+                    variant="text"
+                    sx={{
+                        fontSize: '32px',
+                        padding: '4px',
+                        width: "40px",
+                        height: '40px',
+                        minWidth: 0
+                    }}
+                />
+            </div>
+
+            <div className="ai-chat__messages">
+                {messages.map(x => {
+                    return (
+                        <div key={x.id} className="ai-chat__message">
+                            <Avatar
+                                src={x.persona === "assistant" ? "/portret.jpg" : ""}
+                            >
+                                {x.persona === "assistant" ? "D" : "Y"}
+                            </Avatar>
+
+                            <div>
                                 <div className="ai-chat__message-user">
-                                    {x.persona === "system" ? "Dario" : "You"}
+                                    {x.persona === "assistant" ? "Dario" : "You"}
                                 </div>
 
-                                <div className="ai-chat__message-content">
+                                <div className="ai-chat__message-text">
                                     <Markdown >{x.message}</Markdown>
                                 </div>
                             </div>
-                        )
-                    })}
-                </div>
-
-                <form className="ai-chat__footer" onSubmit={handleSubmitMessage}>
+                        </div>
+                    )
+                })}
+            </div>
+            
+            <div className="ai-chat__footer">
+                <form onSubmit={handleSubmitMessage}>
                     <Input
                         onChange={handleChangeChatMessage}
                         value={chatMessage}
                         placeholder="👋 Ask me anything..."
                     />
                 </form>
+
+                <Button
+                    label={<IoExitOutline />}
+                    onClick={signOut}
+                    sx={{
+                        background: "transparent",
+                        boxShadow: 'none',
+                        minWidth: 0,
+                        padding: '4px',
+                        fontSize: '32px'
+                    }}
+                />
             </div>
-        </Drawer>
+        </div>
     )
 }

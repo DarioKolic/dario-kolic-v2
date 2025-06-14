@@ -3,34 +3,115 @@
 .ai-chat {
     display: flex;
     flex-direction: column;
-    gap: 32px;
     height: 100%;
-    width: 100%;
     padding: 0 16px;
+    overflow: hidden;
+    &_page {
+        background-color: $background;
+        border-radius: 12px;
+        box-shadow: 0 0 24px 0px rgba(93, 30, 140, 0.2);
+        padding: 32px;
+
+    }
     &__title {
         font-size: 24px;
         font-weight: 400;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: $text-light;
     }
+
+    &__title-summary {
+        font-size: 14px;
+        margin-top: 8px;
+        font-weight: 200;
+        color: $text;
+    }
+
+    &__header {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 64px;
+        flex-shrink: 0;
+        padding-bottom: 32px;
+    }
+
+    &__close {
+        font-size: 24px;
+    }
+
+    &__messages {
+        flex: 1;
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        padding: 0 16px 32px 0px; // Space for scrollbar
+
+        &::-webkit-scrollbar {
+            width: 6px;
+        }
+        
+        &::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        
+        &::-webkit-scrollbar-thumb {
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 3px;
+        }
+    }
+
     &__message {
-        margin-top: 32px;
-      
+        display: flex;
+        gap: 12px;
+        
+        &-content {
+            display: flex;
+            gap: 12px;
+        }
+       
         &-user {
             font-size: 18px;
             font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            height: 32px;
         }
-        &-content {
+        
+        &-text {
             margin-top: 8px;
+            font-size: 16px;
+            line-height: 26px;
+            font-weight: 300;
+            
             * {
                 margin: initial;
                 text-decoration: initial;
             }
+            
             a {
                 color: $accent-secondary;
             }
         }
     }
+    
     &__footer {
-        margin-top: auto;
-        padding: 0 0 12px 0;
+        flex-shrink: 0; // Prevent footer from shrinking
+        padding: 0;
+        border-top: 1px solid rgba(0, 0, 0, 0.1); // Optional: visual separator
+        background: inherit; // Ensure background matches container
+
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        width: 100%;
+        gap: 12px;
+        form {
+            width: 100%;
+        }
     }
 }

@@ -4,3 +4,4 @@ export const stopPropagating = (e: React.SyntheticEvent) => {
 
     return
 }
+

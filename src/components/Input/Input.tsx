@@ -19,6 +19,7 @@ export const Input: React.FC<IInputProps> = ({
             value={value}
             onChange={onChange}
             placeholder={placeholder}
+            data-hover
         />
     )
 }

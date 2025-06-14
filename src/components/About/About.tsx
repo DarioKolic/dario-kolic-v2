@@ -6,9 +6,9 @@ import { Tag } from "../Tag/Tag";
 import { IoCalendar, IoLogoGithub, IoDocumentText, IoGitCommit, IoHourglass, IoMail, IoChatbubbleEllipses } from "react-icons/io5";
 import Link from "next/link";
 import { useAIContext } from "@/lib/context/AIContext";
+import Image from "next/image";
 
 import './About.scss'
-import Image from "next/image";
 
 
 export const About = () => {
@@ -48,7 +48,7 @@ export const About = () => {
                     <p className="about__paragraph">Since 2019 I&apos;ve been coding with passion for the web, solving complex problems and building major business features for startups.</p>
                 </div>
                 
-                <div className="about__image" data-hover>
+                <div className="about__image" onClick={handleOpenAIChat} data-hover>
                     <Image src="/portret.jpg" fill objectFit="cover" objectPosition="52%" alt="Dario's portrait"/>
                 </div>
             </div>
@@ -68,7 +68,7 @@ export const About = () => {
                             boxShadow: '0px 0px 24px 7px #301B3F',
                         }
                     }}
-                    disabled
+                    // disabled
                 />
             </div>
         </div>

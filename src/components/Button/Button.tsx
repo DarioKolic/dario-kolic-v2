@@ -1,11 +1,11 @@
+
 import React from "react";
 import { ButtonProps, Button as MUIButton } from '@mui/material'
 
 import './Button.scss'
-import { motion } from "framer-motion";
 
 interface IButtonProps extends ButtonProps {
-    label: string
+    label: React.ReactNode
     icon?: React.ReactNode
 }
 
@@ -23,7 +23,13 @@ export const Button: React.FC<IButtonProps> = ({
             onClick={onClick}
             startIcon={icon}
             sx={{
-                ...sx
+                ...sx,
+                '&:disabled': {
+                    background: '#8A2BE2',
+                    color: '#D1D5DB',
+                    boxShadow: 'inset 0 0 24px 12px #5D1E8C',
+                    cursor: "not-allowed"
+                }
             }}
             data-hover
             {...props}
@@ -32,5 +38,3 @@ export const Button: React.FC<IButtonProps> = ({
         </MUIButton>
     )
 }
-
-export const AnimatedButton = motion.create(Button)

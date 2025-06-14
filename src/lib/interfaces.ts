@@ -3,7 +3,7 @@ import { ETechStack } from "./constants";
 export interface IMessage {
     id: string
     message: string
-    persona: "system" | "user"
+    persona: "assistant" | "user"
     createdAt: Date
 }
 
@@ -41,4 +41,9 @@ export interface IProject {
         clientFeedback?: string
     }
     imageUrl: string
+}
+
+export interface IAIResponse {
+    response: string;
+    askForFeedback: boolean;
 }

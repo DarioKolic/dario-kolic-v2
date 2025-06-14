@@ -9,4 +9,18 @@
     flex-direction: column;
     gap: 64px;
     height: 100%;
+    animation-name: initialLoad;
+    animation-timing-function: cubic-bezier(0.17,0.84,0.44,1);
+    animation-duration: 0.66s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes initialLoad {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }

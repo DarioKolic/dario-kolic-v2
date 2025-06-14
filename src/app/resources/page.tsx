@@ -12,5 +12,3 @@ const APage = async () => {
 }
 
 export default APage
-
-// https://docs.google.com/spreadsheets/d/1gHnt7iLJuxhM77Vv0ez_psWkANjtFwbA5AneFfMZGD4/edit?usp=sharing

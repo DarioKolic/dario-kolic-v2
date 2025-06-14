@@ -1,0 +1,28 @@
+.login {
+    max-width: 420px;
+    width: 100%;
+    margin: 128px auto;
+    align-self: center;
+    &__title {
+        font-size: 24px;
+        font-weight: 600;
+    }
+    &__summary {
+        margin-top: 12px;
+        font-size: 14px;
+        font-weight: 300;
+    }
+    &__form {
+        width: 100%;
+        margin-top: 64px;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+    &__form-anonymous {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px
+    }
+}

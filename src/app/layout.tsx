@@ -13,6 +13,7 @@ const sourceCodePro = Source_Code_Pro({
   weight: ['200', '300', '400', '500', '600', '700', '800', '900'],
   subsets: ['latin']
 });
+
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.dariokolic.com/'),
   title: {
@@ -116,12 +117,10 @@ export default async function RootLayout({
 
         <AppRouterCacheProvider>
           <BackgroundAnimation />
-          {/* <Background /> */}
 
           <ThemeProvider theme={theme}>
             <AppLayout>
               {children}
-
             </AppLayout>
           </ThemeProvider>
         </AppRouterCacheProvider>
