@@ -26,7 +26,8 @@ export const AppLayout: React.FC<PropsWithChildren> = ({ children }) => {
                     {
                         (pathname === "/" || 
                         pathname === "/resources" || 
-                        pathname === "/chat"
+                        pathname === "/chat" || 
+                        pathname.startsWith('/case-study')
                         ) && (
                             <Header />
                         )
