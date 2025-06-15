@@ -1,14 +1,21 @@
-import React from 'react'
+"use client"
+
+import React, { useEffect } from 'react'
 import { About } from '@/components/About/About'
 import { Resume } from '@/components/Resume/Resume'
 import { Work } from '@/components/Work/Work'
+import { Footer } from '@/components/Footer/Footer'
 // import { Contact } from '@/components/Contact/Contact'
 
 
 import './Homepage.scss'
-import { Footer } from '@/components/Footer/Footer'
 
-export const Homepage = async () => {
+export const Homepage = () => {
+    useEffect(() => {
+        // NOTE: Reset overlfow
+        document.body.style.overflow = "auto"
+    }, [])
+
     return (
         <div className='homepage'>
             <About />
