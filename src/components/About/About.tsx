@@ -47,9 +47,9 @@ export const About = () => {
                     <p className="about__paragraph">Unityscript is based on Javascript, so it was a nice intro (and a complex one) to web development and Javascript in general.</p>
                     <p className="about__paragraph">Since 2019 I&apos;ve been coding with passion for the web, solving complex problems and building major business features for startups.</p>
                 </div>
-                
+
                 <div className="about__image" onClick={handleOpenAIChat} data-hover>
-                    <Image src="/portret.jpg" fill objectFit="cover" objectPosition="52%" alt="Dario's portrait"/>
+                    <Image src="/portret.jpg" fill alt="Dario's portrait"/>
                 </div>
             </div>
 

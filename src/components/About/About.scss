@@ -39,6 +39,11 @@
         gap: 32px;
         height: 352px;
         width: 100%;
+
+        @media screen and (max-width: 768px) {
+            flex-direction: column;
+            height: auto;
+        }
     }
     &__image {
         position: relative;
@@ -51,6 +56,19 @@
         cursor: pointer;
         &:hover {
             transform: scale(1.05);
+        }
+
+        img {
+            object-fit: cover;
+            object-position: top;
+        }
+
+        @media screen and (max-width: 768px) {
+            height: 350px;
+            width: 100%;
+            &:hover {
+                transform: scale(1);
+            }
         }
     }
     &__tags {
@@ -66,6 +84,9 @@
     &__text {
         color: $text;
         width: 66%;
+        @media screen and (max-width: 768px) {
+            width: 100%;
+        }
     }
     &__sub-title {
         font-size: 28px;
