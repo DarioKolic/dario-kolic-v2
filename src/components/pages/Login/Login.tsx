@@ -1,9 +1,9 @@
 "use client"
 
 import React, { useEffect, useRef, useState } from "react";
-import { signInAnonymously, signInWithGoogle } from "@/app/auth/actions";
+import { signInAnonymously } from "@/app/auth/actions";
 import { Button } from "@/components/Button/Button";
-import { IoLogoGoogle, IoPerson } from "react-icons/io5";
+import { IoPerson } from "react-icons/io5";
 import { SxProps } from "@mui/material";
 import HCaptcha from "@hcaptcha/react-hcaptcha";
 import { useAIContext } from "@/lib/context/AIContext";
@@ -73,7 +73,7 @@ export const Login: React.FC = () => {
             <div className="login__summary"><b>Why log in?</b> It&apos;s a security measure to keep the chat secure an free of malicious users.</div>
 
             <div className="login__form">
-                {!isUpworkUser && (
+                {/* {!isUpworkUser && (
                     <form action={signInWithGoogle}>
                         <Button
                             icon={<IoLogoGoogle />}
@@ -82,7 +82,7 @@ export const Login: React.FC = () => {
                             sx={buttonSx}
                         />
                     </form>
-                )}
+                )} */}
 
                 <form className="login__form-anonymous" onSubmit={handleShowCaptcha}>
                     <Button
