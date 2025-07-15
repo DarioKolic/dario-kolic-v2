@@ -6,7 +6,6 @@ import { Button } from "@/components/Button/Button";
 import { IoPerson } from "react-icons/io5";
 import { SxProps } from "@mui/material";
 import HCaptcha from "@hcaptcha/react-hcaptcha";
-import { useAIContext } from "@/lib/context/AIContext";
 
 import './Login.scss'
 
@@ -17,8 +16,6 @@ const buttonSx: SxProps = {
 }
 
 export const Login: React.FC = () => {
-    const { isUpworkUser } = useAIContext()
-
     const captchaRef = useRef<HCaptcha>(null);
     const [isLoggingIn, setIsLoggingIn] = useState(false);
     const [isChaptchaOpen, setIsChaptchaOpen] = useState(false)
